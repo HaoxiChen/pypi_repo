@@ -303,3 +303,23 @@
 2025-07-27 21:16:56,730 - models.repository - INFO - Repository manager initialized with packages directory: packages
 2025-07-27 21:16:56,730 - models.repository - INFO - Scanned 0 packages
 2025-07-27 21:16:56,731 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:16:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:17:56,735 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:17:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:17:56,738 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:17:56,738 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:17:56,738 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:17:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:18:56,742 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:18:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:18:56,746 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:18:56,746 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:18:56,747 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:18:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:19:56,751 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:19:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:19:56,755 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:19:56,755 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:19:56,756 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:19:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:20:56,759 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:20:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:20:56,762 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:20:56,762 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:20:56,763 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:20:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:21:56,766 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:21:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:21:56,770 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:21:56,770 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:21:56,771 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:21:56] "GET /stats HTTP/1.1" 200 -
