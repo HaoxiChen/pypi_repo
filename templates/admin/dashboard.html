@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyPI Repository Admin Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            margin: 0; padding: 0; background: #f8f9fa; 
+        }
+        .header {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+        }
+        .header h1 { margin: 0; font-size: 2.5em; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; }
+        
+        .container { 
+            max-width: 1200px; margin: 20px auto; padding: 0 20px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-tab {
+            flex: 1;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            transition: all 0.2s;
+        }
+        .nav-tab.active {
+            background: #dc3545;
+            color: white;
+        }
+        .nav-tab:hover {
+            background: #c82333;
+            color: white;
+        }
+        
+        .tab-content {
+            background: white;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+        }
+        
+        .package-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            transition: box-shadow 0.2s;
+        }
+        .package-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .package-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .package-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .package-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-primary:hover { background: #0056b3; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-danger:hover { background: #c82333; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        
+        .file-list {
+            margin: 10px 0;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .file-type {
+            background: #e9ecef;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .upload-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+        .form-file {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #ddd;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .form-file:hover {
+            border-color: #007bff;
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🔧 PyPI Repository Admin</h1>
+            <p>Package Management & Administration</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('dashboard')">📊 Dashboard</button>
+            <button class="nav-tab" onclick="showTab('upload')">📤 Upload Package</button>
+            <button class="nav-tab" onclick="showTab('packages')">📦 Manage Packages</button>
+        </div>
+        
+        <div class="tab-content">
+            <div id="dashboard" class="tab-panel active">
+                <h2>Repository Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">{{ packages|length }}</div>
+                        <div class="stat-label">Total Packages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ total_files }}</div>
+                        <div class="stat-label">Total Files</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ packages|length }}</div>
+                        <div class="stat-label">Active Packages</div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/admin/upload" class="btn btn-primary">Upload New Package</a>
+                    <a href="/" class="btn btn-success">View Public Dashboard</a>
+                </div>
+            </div>
+            
+            <div id="upload" class="tab-panel">
+                <h2>Upload Package</h2>
+                
+                <form class="upload-form" action="/admin/upload" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="form-label">Package Name (Optional)</label>
+                        <input type="text" name="package_name" class="form-input" 
+                               placeholder="Leave empty to auto-detect from filename">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Package File</label>
+                        <input type="file" name="package_file" class="form-input" 
+                               accept=".whl,.tar.gz,.zip" required>
+                        <small>Supported formats: .whl, .tar.gz, .zip</small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Upload Package</button>
+                </form>
+            </div>
+            
+            <div id="packages" class="tab-panel">
+                <h2>Manage Packages</h2>
+                
+                {% if packages %}
+                <div class="package-grid">
+                    {% for package_name, files in packages.items() %}
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-name">{{ package_name }}</span>
+                            <div class="package-actions">
+                                <button class="btn btn-primary" onclick="viewPackage('{{ package_name }}')">View</button>
+                                <button class="btn btn-danger" onclick="deletePackage('{{ package_name }}')">Delete</button>
+                            </div>
+                        </div>
+                        
+                        <div class="file-list">
+                            {% for file in files %}
+                            <div class="file-item">
+                                <span>{{ file }}</span>
+                                <span class="file-type">{{ 'Wheel' if file.endswith('.whl') else 'Source' }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p style="text-align: center; color: #666; padding: 40px;">No packages available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            // Hide all tab panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab panel
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+        
+        function deletePackage(packageName) {
+            if (confirm(`确定要删除包 "${packageName}" 吗？此操作不可撤销。`)) {
+                fetch(`/admin/packages/${packageName}`, {
+                    method: 'DELETE',
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert('删除失败: ' + data.error);
+                    } else {
+                        alert('删除成功！');
+                        location.reload();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('删除失败');
+                });
+            }
+        }
+        
+        function viewPackage(packageName) {
+            window.open(`/${packageName}/`, '_blank');
+        }
+    </script>
+</body>
+</html> 

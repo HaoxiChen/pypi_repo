@@ -1,0 +1,32 @@
+[Unit]
+Description=PyPI Simple Repository Server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=forking
+User=haoxichen
+Group=haoxichen
+WorkingDirectory=/home/haoxichen/Desktop/pypi_repo
+ExecStart=/home/haoxichen/Desktop/pypi_repo/start.sh
+ExecStop=/home/haoxichen/Desktop/pypi_repo/stop.sh
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pypi-repo
+
+# 安全设置
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/home/haoxichen/Desktop/pypi_repo
+
+# 资源限制
+LimitNOFILE=65536
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target 

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Package - PyPI Repository Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            margin: 0; padding: 0; background: #f8f9fa; 
+        }
+        .header {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 800px; margin: 0 auto; padding: 0 20px;
+        }
+        .header h1 { margin: 0; font-size: 2.5em; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; }
+        
+        .container { 
+            max-width: 800px; margin: 20px auto; padding: 0 20px;
+        }
+        
+        .upload-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+        .form-file {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            border: 3px dashed #dee2e6;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f8f9fa;
+        }
+        .form-file:hover {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+        .form-file input[type="file"] {
+            display: none;
+        }
+        .file-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-primary { 
+            background: #007bff; 
+            color: white; 
+        }
+        .btn-primary:hover { 
+            background: #0056b3; 
+            transform: translateY(-1px);
+        }
+        .btn-secondary { 
+            background: #6c757d; 
+            color: white; 
+        }
+        .btn-secondary:hover { 
+            background: #545b62; 
+        }
+        
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border-left-color: #28a745;
+        }
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border-left-color: #dc3545;
+        }
+        
+        .upload-info {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        .upload-info h3 {
+            margin: 0 0 15px 0;
+            color: #1976d2;
+        }
+        .upload-info ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .upload-info li {
+            margin: 5px 0;
+            color: #424242;
+        }
+        
+        .file-preview {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        .file-preview.hidden {
+            display: none;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📤 Upload Package</h1>
+            <p>Add new packages to your PyPI repository</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="upload-card">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'error' if category == 'error' else 'success' }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <div class="upload-info">
+                <h3>📋 Upload Guidelines</h3>
+                <ul>
+                    <li><strong>Supported formats:</strong> .whl (Wheel), .tar.gz (Source), .zip</li>
+                    <li><strong>Package name:</strong> Leave empty to auto-detect from filename</li>
+                    <li><strong>File size:</strong> Maximum 100MB per file</li>
+                    <li><strong>Naming:</strong> Use standard Python package naming conventions</li>
+                </ul>
+            </div>
+            
+            <form action="/admin/upload" method="post" enctype="multipart/form-data" id="uploadForm">
+                <div class="form-group">
+                    <label class="form-label">Package Name (Optional)</label>
+                    <input type="text" name="package_name" class="form-input" 
+                           placeholder="e.g., my-package (leave empty to auto-detect)" 
+                           id="packageName">
+                    <div class="file-info">
+                        Package name will be auto-detected from filename if left empty
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Package File</label>
+                    <div class="form-file" onclick="document.getElementById('packageFile').click()">
+                        <div id="filePlaceholder">
+                            <div style="font-size: 48px; margin-bottom: 10px;">📁</div>
+                            <div style="font-size: 18px; font-weight: 600; color: #333;">
+                                Click to select package file
+                            </div>
+                            <div style="color: #666; margin-top: 5px;">
+                                or drag and drop here
+                            </div>
+                        </div>
+                        <div id="fileSelected" class="hidden">
+                            <div style="font-size: 24px; margin-bottom: 10px;">✅</div>
+                            <div id="fileName" style="font-weight: 600; color: #333;"></div>
+                            <div id="fileSize" style="color: #666; margin-top: 5px;"></div>
+                        </div>
+                        <input type="file" name="package_file" id="packageFile" 
+                               accept=".whl,.tar.gz,.zip" required>
+                    </div>
+                    
+                    <div id="filePreview" class="file-preview hidden">
+                        <strong>Detected package name:</strong> <span id="detectedPackage"></span>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary">📤 Upload Package</button>
+                    <a href="/admin/" class="btn btn-secondary">← Back to Admin</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const fileInput = document.getElementById('packageFile');
+        const filePlaceholder = document.getElementById('filePlaceholder');
+        const fileSelected = document.getElementById('fileSelected');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const filePreview = document.getElementById('filePreview');
+        const detectedPackage = document.getElementById('detectedPackage');
+        const packageNameInput = document.getElementById('packageName');
+        
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Show file info
+                filePlaceholder.classList.add('hidden');
+                fileSelected.classList.remove('hidden');
+                fileName.textContent = file.name;
+                fileSize.textContent = formatFileSize(file.size);
+                
+                // Auto-detect package name
+                const detectedName = extractPackageName(file.name);
+                detectedPackage.textContent = detectedName;
+                filePreview.classList.remove('hidden');
+                
+                // Set package name if input is empty
+                if (!packageNameInput.value) {
+                    packageNameInput.value = detectedName;
+                }
+            } else {
+                filePlaceholder.classList.remove('hidden');
+                fileSelected.classList.add('hidden');
+                filePreview.classList.add('hidden');
+            }
+        });
+        
+        // Drag and drop support
+        const formFile = document.querySelector('.form-file');
+        
+        formFile.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            formFile.style.borderColor = '#007bff';
+            formFile.style.background = '#e3f2fd';
+        });
+        
+        formFile.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            formFile.style.borderColor = '#dee2e6';
+            formFile.style.background = '#f8f9fa';
+        });
+        
+        formFile.addEventListener('drop', function(e) {
+            e.preventDefault();
+            formFile.style.borderColor = '#dee2e6';
+            formFile.style.background = '#f8f9fa';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        });
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function extractPackageName(filename) {
+            let name = filename;
+            
+            // Remove extension
+            if (filename.endsWith('.whl')) {
+                name = filename.slice(0, -4);
+            } else if (filename.endsWith('.tar.gz')) {
+                name = filename.slice(0, -7);
+            } else if (filename.endsWith('.zip')) {
+                name = filename.slice(0, -4);
+            }
+            
+            // Extract package name (remove version)
+            const parts = name.split('-');
+            return parts[0] || name;
+        }
+    </script>
+</body>
+</html> 

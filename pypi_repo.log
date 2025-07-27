@@ -1,0 +1,243 @@
+2025-07-27 20:52:53,572 - __main__ - INFO - Starting PyPI repository server...
+ * Serving Flask app 'app'
+ * Debug mode: on
+2025-07-27 20:52:53,589 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8385
+ * Running on http://192.168.1.31:8385
+2025-07-27 20:52:53,589 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-27 20:52:53,596 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-07-27 20:52:53,751 - __main__ - INFO - Starting PyPI repository server...
+2025-07-27 20:52:53,765 - werkzeug - WARNING -  * Debugger is active!
+2025-07-27 20:52:53,765 - werkzeug - INFO -  * Debugger PIN: 783-201-295
+2025-07-27 20:52:56,411 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:52:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:52:56,535 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:52:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:52:56,539 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:52:56,539 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:52:56,540 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:52:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:52:56,568 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:52:56,568 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:52:56,579 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:52:56] "GET / HTTP/1.1" 200 -
+2025-07-27 20:53:09,682 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:09,683 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:09,683 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:53:09] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:53:26,610 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:26,611 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:26,612 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:26] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:53:28,615 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:28,615 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:28,625 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:28] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:53:39,568 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:39] "[32mGET /admin HTTP/1.1[0m" 308 -
+2025-07-27 20:53:39,575 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:39,576 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:39,576 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:39] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:53:39,679 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:39,680 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:39,681 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:53:39] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:53:49,261 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:49] "GET /admin/upload HTTP/1.1" 200 -
+2025-07-27 20:53:55,094 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:55,095 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:55,096 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:55] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:53:56,543 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:53:56,547 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:53:56,547 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:53:56,547 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:53:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:54:01,236 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:01,236 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:54:01,241 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:01] "GET /payo-cli/ HTTP/1.1" 200 -
+2025-07-27 20:54:09,676 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:09,676 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:54:09,677 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:54:09] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:54:09,684 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:09,684 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:09] "DELETE /admin/packages/payo-cli HTTP/1.1" 200 -
+2025-07-27 20:54:10,778 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:10,779 - models.repository - INFO - Scanned 0 packages
+2025-07-27 20:54:10,780 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:10] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:54:39,688 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:39,688 - models.repository - INFO - Scanned 0 packages
+2025-07-27 20:54:39,688 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:54:39] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:54:52,668 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:52,669 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:52] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:54:52,682 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:52,682 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:54:52,683 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:52] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:54:55,034 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:55,034 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:54:55,035 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:55] "GET /payo_cli/ HTTP/1.1" 200 -
+2025-07-27 20:54:56,551 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:54:56,554 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:54:56,554 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:54:56,554 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:54:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:55:09,671 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:09,672 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:09,672 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:55:09] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:55:14,226 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:14,226 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:14,227 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:14] "GET /payo_cli/ HTTP/1.1" 200 -
+2025-07-27 20:55:15,871 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:15,871 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:15,872 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:15] "GET / HTTP/1.1" 200 -
+2025-07-27 20:55:24,275 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:24,276 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:24,277 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:24] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:55:32,619 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:32,620 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:32,620 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:32] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:55:39,298 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:39,299 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:39,300 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:39] "GET / HTTP/1.1" 200 -
+2025-07-27 20:55:39,681 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:39,682 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:39,682 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:55:39] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:55:56,558 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:55:56,561 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:55:56,561 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:55:56,562 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:55:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:56:07,322 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo_cli/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:07,324 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo_cli/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:07,324 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo_cli/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:07,323 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:07,326 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:07] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:56:07,339 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:07,340 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:07,341 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:07] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:08,187 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-07-27 20:56:08,340 - __main__ - INFO - Starting PyPI repository server...
+2025-07-27 20:56:08,353 - werkzeug - WARNING -  * Debugger is active!
+2025-07-27 20:56:08,353 - werkzeug - INFO -  * Debugger PIN: 783-201-295
+2025-07-27 20:56:09,686 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:09,687 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:09,687 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:56:09] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:56:21,980 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:21,981 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:21] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:56:21,990 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:21,991 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:22,003 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:22] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:27,801 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:27,803 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:27] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:56:27,815 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:27,816 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:27,816 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:27] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:29,817 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:29,818 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:29,824 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:29] "GET /payo_cli/ HTTP/1.1" 200 -
+2025-07-27 20:56:43,959 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo-2/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:43,959 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:43,960 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo-2/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:43,961 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:43] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:56:43,961 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo-2/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:43,971 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:43,972 - models.repository - INFO - Scanned 2 packages
+2025-07-27 20:56:43,973 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:43] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:44,533 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-07-27 20:56:44,695 - __main__ - INFO - Starting PyPI repository server...
+2025-07-27 20:56:44,709 - werkzeug - WARNING -  * Debugger is active!
+2025-07-27 20:56:44,710 - werkzeug - INFO -  * Debugger PIN: 783-201-295
+2025-07-27 20:56:51,612 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:51,613 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo-2/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:51,614 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:51] "DELETE /admin/packages/payo-2 HTTP/1.1" 200 -
+2025-07-27 20:56:51,854 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-07-27 20:56:52,008 - __main__ - INFO - Starting PyPI repository server...
+2025-07-27 20:56:52,020 - werkzeug - WARNING -  * Debugger is active!
+2025-07-27 20:56:52,021 - werkzeug - INFO -  * Debugger PIN: 783-201-295
+2025-07-27 20:56:52,927 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:52,927 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:56:52,935 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:52] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:54,852 - werkzeug - INFO -  * Detected change in '/home/haoxichen/Desktop/pypi_repo/packages/payo_cli/payo_cli-1.0.0.tar.zip', reloading
+2025-07-27 20:56:54,853 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:54,853 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:54] "DELETE /admin/packages/payo_cli HTTP/1.1" 200 -
+2025-07-27 20:56:55,153 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-07-27 20:56:55,306 - __main__ - INFO - Starting PyPI repository server...
+2025-07-27 20:56:55,319 - werkzeug - WARNING -  * Debugger is active!
+2025-07-27 20:56:55,320 - werkzeug - INFO -  * Debugger PIN: 783-201-295
+2025-07-27 20:56:55,904 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:55,904 - models.repository - INFO - Scanned 0 packages
+2025-07-27 20:56:55,911 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:55] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:56:56,566 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:56:56,568 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:56:56,569 - models.repository - INFO - Scanned 0 packages
+2025-07-27 20:56:56,569 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:56:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:57:03,418 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:03,419 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:03] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:57:03,431 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:03,432 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:03,433 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:03] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:57:07,124 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:07,126 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:07] "[32mPOST /admin/upload HTTP/1.1[0m" 302 -
+2025-07-27 20:57:07,134 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:07,134 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:07,135 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:07] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 20:57:10,715 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:10,716 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:10,717 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:57:10] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:57:20,547 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:20,548 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:20,563 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:57:20] "GET / HTTP/1.1" 200 -
+2025-07-27 20:57:20,591 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:20,592 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:20,592 - routes.views - ERROR - Error rendering package page for favicon.ico: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-07-27 20:57:20,592 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:57:20] "[35m[1mGET /favicon.ico/ HTTP/1.1[0m" 500 -
+2025-07-27 20:57:50,603 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:50,604 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:50,605 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:57:50] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:57:56,573 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:57:56,577 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:57:56,577 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:57:56,578 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:57:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:58:20,597 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:58:20,597 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:58:20,598 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:58:20] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:58:50,606 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:58:50,607 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:58:50,608 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:58:50] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:58:56,582 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:58:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:58:56,585 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:58:56,585 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:58:56,586 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:58:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:59:20,598 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:59:20,598 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:59:20,599 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:59:20] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:59:50,606 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:59:50,607 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:59:50,607 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 20:59:50] "GET /stats HTTP/1.1" 200 -
+2025-07-27 20:59:56,589 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:59:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 20:59:56,592 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 20:59:56,592 - models.repository - INFO - Scanned 1 packages
+2025-07-27 20:59:56,593 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 20:59:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:00:20,601 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:00:20,601 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:00:20,602 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:00:20] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:00:50,595 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:00:50,596 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:00:50,596 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:00:50] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:00:56,597 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:00:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:00:56,601 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:00:56,602 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:00:56,603 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:00:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:01:20,599 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:01:20,599 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:01:20,600 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:01:20] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:01:50,600 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:01:50,601 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:01:50,602 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:01:50] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:01:56,606 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:01:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:01:56,609 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:01:56,610 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:01:56,610 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:01:56] "GET /stats HTTP/1.1" 200 -
+2025-07-27 21:02:13,226 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:13] "[32mGET /admin HTTP/1.1[0m" 308 -
+2025-07-27 21:02:13,233 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:13,234 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:02:13,234 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:13] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 21:02:13,274 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:13,275 - models.repository - INFO - Scanned 1 packages
+2025-07-27 21:02:13,275 - routes.views - ERROR - Error rendering package page for favicon.ico: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-07-27 21:02:13,275 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:13] "[35m[1mGET /favicon.ico/ HTTP/1.1[0m" 500 -
+2025-07-27 21:02:16,186 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:16,187 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:16] "DELETE /admin/packages/payo_cli HTTP/1.1" 200 -
+2025-07-27 21:02:17,038 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:17,039 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:02:17,039 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:17] "GET /admin/ HTTP/1.1" 200 -
+2025-07-27 21:02:17,066 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:17,066 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:02:17,066 - routes.views - ERROR - Error rendering package page for favicon.ico: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-07-27 21:02:17,067 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:17] "[35m[1mGET /favicon.ico/ HTTP/1.1[0m" 500 -

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Python Package Repository</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        .package { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .package h2 { margin-top: 0; color: #0066cc; }
+        .file { margin: 5px 0; }
+        .file a { color: #0066cc; text-decoration: none; }
+        .file a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Simple Python Package Repository</h1>
+    <p>This is a simple Python package repository containing the following packages:</p>
+    
+    <div class="package">
+        <h2><a href="payo-cli/">payo-cli</a></h2>
+        <p>CLI for POS Schema Data Management</p>
+        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Files:</strong></p>
+        <div class="file">
+            <a href="payo-cli/payo_cli-1.0.0-py3-none-any.whl">payo_cli-1.0.0-py3-none-any.whl</a> (Wheel distribution)
+        </div>
+        <div class="file">
+            <a href="payo-cli/payo_cli-1.0.0.tar.gz">payo_cli-1.0.0.tar.gz</a> (Source distribution)
+        </div>
+    </div>
+    
+    <hr>
+    <p><em>To install packages from this repository, use:</em></p>
+    <code>pip install --extra-index-url https://your-server.com/ payo-cli</code>
+</body>
+</html> 
