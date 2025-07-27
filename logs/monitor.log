@@ -19,3 +19,5 @@
 2025-07-27 21:00:56,604 - __main__ - INFO - Service stats: {'files_count': 2, 'is_healthy': True, 'last_health_check': 1753614056.602741, 'packages_count': 1, 'total_size_mb': 0.02, 'uptime': 0.0011022090911865234}
 2025-07-27 21:01:56,607 - __main__ - INFO - Service is healthy
 2025-07-27 21:01:56,611 - __main__ - INFO - Service stats: {'files_count': 2, 'is_healthy': True, 'last_health_check': 1753614116.6105494, 'packages_count': 1, 'total_size_mb': 0.02, 'uptime': 0.0008981227874755859}
+2025-07-27 21:02:56,616 - __main__ - INFO - Service is healthy
+2025-07-27 21:02:56,621 - __main__ - INFO - Service stats: {'files_count': 0, 'is_healthy': True, 'last_health_check': 1753614176.6196365, 'packages_count': 0, 'total_size_mb': 0.0, 'uptime': 0.0006589889526367188}

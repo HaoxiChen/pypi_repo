@@ -241,3 +241,7 @@
 2025-07-27 21:02:17,066 - models.repository - INFO - Scanned 0 packages
 2025-07-27 21:02:17,066 - routes.views - ERROR - Error rendering package page for favicon.ico: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-07-27 21:02:17,067 - werkzeug - INFO - 192.168.1.20 - - [27/Jul/2025 21:02:17] "[35m[1mGET /favicon.ico/ HTTP/1.1[0m" 500 -
+2025-07-27 21:02:56,615 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:02:56] "GET /health HTTP/1.1" 200 -
+2025-07-27 21:02:56,618 - models.repository - INFO - Repository manager initialized with packages directory: packages
+2025-07-27 21:02:56,619 - models.repository - INFO - Scanned 0 packages
+2025-07-27 21:02:56,619 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2025 21:02:56] "GET /stats HTTP/1.1" 200 -
